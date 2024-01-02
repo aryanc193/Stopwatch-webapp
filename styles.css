@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Foldit:wght@200;300;400;500;600&family=Orbitron:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body, html {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.bgimg {
+  z-index: -2;
+  filter: brightness(50%);
+  width: 100%;
+  height: 130%;
+  margin-top: -10em;
+  overflow: hidden;
+}
+
+.bgimg-img {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#stopwatch {
+  position: absolute;
+  z-index: 0;
+  margin-top: -10em;
+  text-align: center;
+  width: 20em;
+  height: 20em;
+  background-color: rgb(0, 140, 255, 0.6);
+  padding: 1em;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px 2px rgba(47, 0, 255, 0.6);
+}
+
+#movingDot {
+  border: transparent;
+  margin-top: -14em;
+  margin-left: -0em;
+  border-radius: 50%;
+  border-top: 8px solid rgba(226, 147, 43, 0.877);
+  width: 20em;
+  height: 20em;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  pointer-events: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/* browser configuration */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#display {
+  margin-top: 3.3em;
+  font-family: "Orbitron";
+  margin-left: 0.8em;
+  width: 250px;
+  height: fit-content;
+  font-size: 30px;
+  padding: 0.3em;
+  border-radius: 20px;
+  background-color: rgba(226, 147, 43, 0.877);
+  color: aliceblue;
+}
+
+#lapTimes {
+  position: absolute;
+  overflow-y: auto;
+  top: 27em;
+  z-index: 0;
+  margin-top: 30px;
+  text-align: center;
+  width: 20em;
+  height: 11em;
+  background-color: rgb(0, 140, 255, 0.6);
+  box-shadow: 2px 2px 5px 2px rgba(47, 0, 255, 0.6);
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0, 140, 255, 0.6) rgba(0, 0, 0, 0);
+}
+
+button {
+  box-shadow: 0 2px 1px 0 rgb(255, 0, 255), 0 2px 5px 0 rgb(255, 0, 255);
+  background-color: rgba(226, 147, 43, 0.877);
+  color: aliceblue;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+}
+
+#lapTimes::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+#lapTimes::-webkit-scrollbar-track {
+  background: rgba(150, 96, 26, 0.877);
+  border-radius: px;
+}
+
+#lapTimes::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: rgba(226, 147, 43, 0.877);
+}
+
+#lapTimes::-webkit-scrollbar-thumb:hover {
+  background: rgba(226, 147, 43, 0.877);
+}
+
+@media only screen and (min-width: 900px) {
+  #lapTimes {
+    top: 35em;
+  }
+}
