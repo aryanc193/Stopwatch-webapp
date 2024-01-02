@@ -31,7 +31,7 @@ body, html {
 #stopwatch {
   position: absolute;
   z-index: 0;
-  margin-top: -10em;
+  margin-top: -12.5em;
   text-align: center;
   width: 20em;
   height: 20em;
@@ -92,7 +92,7 @@ body, html {
   overflow-y: auto;
   top: 27em;
   z-index: 0;
-  margin-top: 30px;
+  margin-top: 45px;
   text-align: center;
   width: 20em;
   height: 11em;
